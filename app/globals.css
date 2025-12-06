@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.breed-name {
+  text-transform: capitalize;
+}
+
+.top-container {
+  margin-bottom: 2em;
+}
+
+.thumbnail-container {
+  margin-top: .5em;
+  padding-bottom: 2.5em;
+}
+
+.hover-zoom {
+  transition: transform 200ms ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.08); /* adjust percentage as needed */
+  cursor: pointer;
+}
+
+.drawer-button-text {
+  float: left;
+  margin: -3px 3px;
+}
+
+.drawer-tools {
+  margin: -.25em 0 .5em 0;
+  width: 95%;
+}
+
